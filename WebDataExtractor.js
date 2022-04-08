@@ -67,7 +67,7 @@ function generateInputData() {
       
     //console.log(substances);
      
-	let base_arr = Object.keys(base_substances); 
+    let base_arr = Object.keys(base_substances); 
     let arr = Object.keys(substances);
 
     //console.log(arr);
