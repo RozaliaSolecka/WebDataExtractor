@@ -85,7 +85,7 @@ function generateInputData() {
         return result;
       }
       //const combinations = combinationsF( arr, 1 );
-	  const combinations = arr;
+      const combinations = arr;
 
       //console.log(combinations);
       //console.log(substances["C2H6"].min);
