@@ -50,14 +50,11 @@ function performCalculations() {
 function generateInputData() {
     const root = 'CH4'; //metan
     const inputs = [];
-	
-    let base_substances = {
-    "C2H6": {'min': 5, 'max': 10, 'step': 1}, //etan
-    "C3H8": {'min': 5, 'max': 10, 'step': 1}, //propan
-    "CO2": {'min': 1, 'max': 10, 'step': 1}, //dwutlenek wegla
-    };
+    //let root = {"CH4": {'min': 50, 'max': 80, 'step': 1}};
     
     let substances = {
+        "C2H6": {'min': 5, 'max': 10, 'step': 1}, //etan
+        "C3H8": {'min': 5, 'max': 10, 'step': 1}, //propan
         "IC4H10": {'min': 0, 'max': 5, 'step': 1}, //iso-butan
         "NC4H10": {'min': 0, 'max': 5, 'step': 1}, //n-butan
         "IC5H12": {'min': 0, 'max': 5, 'step': 1},//iso-pentan
@@ -67,7 +64,6 @@ function generateInputData() {
       
     //console.log(substances);
      
-	let base_arr = Object.keys(base_substances); 
     let arr = Object.keys(substances);
 
     //console.log(arr);
@@ -84,19 +80,16 @@ function generateInputData() {
         }
         return result;
       }
-      //const combinations = combinationsF( arr, 1 );
-	  const combinations = arr;
+      const combinations = combinationsF( arr, 4 );
 
       //console.log(combinations);
       //console.log(substances["C2H6"].min);
    
-     let substance_1 = base_arr[0];
-     let substance_2 = base_arr[1];
-     let substance_3 = base_arr[2];
-		
     for (var comb = 0; comb < combinations.length; comb++){
-       
-        let substance_4 = combinations[comb];
+        let substance_1 = combinations[comb][0];
+        let substance_2 = combinations[comb][1];
+		let substance_3 = combinations[comb][2];
+		let substance_4 = combinations[comb][3];
 	
         //console.log(substance_1);
         //console.log(substance_2);
@@ -107,9 +100,9 @@ function generateInputData() {
         let restKeys  = arr.filter(value => !combinations[comb].includes(value));  //list with rest keys
         //console.log(restKeys)
 
-        for (let i = base_substances[substance_1].min; i <= base_substances[substance_1].max; i = i + base_substances[substance_1].step) {
-            for (let j = base_substances[substance_2].min; j <= base_substances[substance_2].max; j = j + base_substances[substance_2].step) {
-                for (let k = base_substances[substance_3].min; k <= base_substances[substance_3].max; k = k + base_substances[substance_3].step) {
+        for (let i = substances[substance_1].min; i <= substances[substance_1].max; i = i + substances[substance_1].step) {
+            for (let j = substances[substance_2].min; j <= substances[substance_2].max; j = j + substances[substance_2].step) {
+                for (let k = substances[substance_3].min; k <= substances[substance_3].max; k = k + substances[substance_3].step) {
                     for (let l = substances[substance_4].min; l <= substances[substance_4].max; l = l + substances[substance_4].step) {
                        
                             const concentrations = {};
