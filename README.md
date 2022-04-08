@@ -1,4 +1,7 @@
 ## WebDataExtractor
+> Web data extractor for cummis calculator web page: 
+> 
+> https://www.cummins.com/engines/natural-gas/fuel-quality-calculator?fbclid=IwAR2DTsELoGFpaYCg0C_YXWdG3fj0DYADOU9ixrTsNbRv6YKyVkybfNCiVz0
 ### Choose all
 CH4
 
