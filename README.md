@@ -1,5 +1,5 @@
-## WebDataExtractor
-# Choose all
+# WebDataExtractor
+## Choose all
 CH4
 
 C2H6 - 5-10
@@ -8,7 +8,7 @@ C3H8 - 5-10
 
 CO2  - 1-10
 
-# Choose one
+## Choose one
 
 IC4H10 - 0-5
 
